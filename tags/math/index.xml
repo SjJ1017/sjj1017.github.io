@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Math on Jiajun, Shen</title>
-    <link>http://localhost:49441/tags/math/</link>
+    <link>https://sjj1017.github.io/tags/math/</link>
     <description>Recent content in Math on Jiajun, Shen</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 19 Oct 2024 16:34:43 +0800</lastBuildDate>
-    <atom:link href="http://localhost:49441/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sjj1017.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>人工智能的数学基础</title>
-      <link>http://localhost:49441/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+      <link>https://sjj1017.github.io/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://sjj1017.github.io/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
       <description>&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;经验风险$R_{emp}(f(u,x)=\frac{1}{n}\sum_{i=1}^n l(f(u_i,x),v_i)$&lt;/li&gt;

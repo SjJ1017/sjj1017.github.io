@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Jiajun, Shen</title>
-    <link>http://localhost:49441/tags/</link>
+    <link>https://sjj1017.github.io/tags/</link>
     <description>Recent content in Tags on Jiajun, Shen</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 19 Oct 2024 16:34:43 +0800</lastBuildDate>
-    <atom:link href="http://localhost:49441/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sjj1017.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>http://localhost:49441/tags/ai/</link>
+      <link>https://sjj1017.github.io/tags/ai/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/tags/ai/</guid>
+      <guid>https://sjj1017.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Control</title>
-      <link>http://localhost:49441/tags/control/</link>
+      <link>https://sjj1017.github.io/tags/control/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/tags/control/</guid>
+      <guid>https://sjj1017.github.io/tags/control/</guid>
       <description></description>
     </item>
     <item>
       <title>CS</title>
-      <link>http://localhost:49441/tags/cs/</link>
+      <link>https://sjj1017.github.io/tags/cs/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/tags/cs/</guid>
+      <guid>https://sjj1017.github.io/tags/cs/</guid>
       <description></description>
     </item>
     <item>
       <title>Math</title>
-      <link>http://localhost:49441/tags/math/</link>
+      <link>https://sjj1017.github.io/tags/math/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/tags/math/</guid>
+      <guid>https://sjj1017.github.io/tags/math/</guid>
       <description></description>
     </item>
   </channel>

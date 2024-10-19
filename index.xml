@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jiajun, Shen</title>
-    <link>http://localhost:49441/</link>
+    <link>https://sjj1017.github.io/</link>
     <description>Recent content on Jiajun, Shen</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 19 Oct 2024 16:34:43 +0800</lastBuildDate>
-    <atom:link href="http://localhost:49441/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sjj1017.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>人工智能的数学基础</title>
-      <link>http://localhost:49441/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+      <link>https://sjj1017.github.io/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://sjj1017.github.io/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
       <description>&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;经验风险$R_{emp}(f(u,x)=\frac{1}{n}\sum_{i=1}^n l(f(u_i,x),v_i)$&lt;/li&gt;
@@ -508,9 +508,9 @@ end&lt;/li&gt;
     </item>
     <item>
       <title>复杂系统决策智能</title>
-      <link>http://localhost:49441/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</link>
+      <link>https://sjj1017.github.io/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</guid>
+      <guid>https://sjj1017.github.io/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</guid>
       <description>&lt;h3 id=&#34;绪论&#34;&gt;绪论&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;最优化问题
@@ -790,9 +790,9 @@ end&lt;/li&gt;
     </item>
     <item>
       <title>理论计算机</title>
-      <link>http://localhost:49441/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <link>https://sjj1017.github.io/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+      <guid>https://sjj1017.github.io/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
       <description>&lt;h3 id=&#34;确定性有穷自动机&#34;&gt;确定性有穷自动机&lt;/h3&gt;
 &lt;p&gt;状态图 ：状态 ：起始状态(StartState)、接受状态(AcceptState)；转移：输入符号，从一个状态转移到另一个状态； 输出：接受或拒绝。
 $M={Q,\Sigma,\delta,q_o,F}$ 字母代表状态集、字母表、转一函数、起始状态、接收状态集&lt;/p&gt;
@@ -1153,9 +1153,9 @@ $M={Q,\Sigma,\delta,q_o,F}$ 字母代表状态集、字母表、转一函数、�
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:49441/about/</link>
+      <link>https://sjj1017.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49441/about/</guid>
+      <guid>https://sjj1017.github.io/about/</guid>
       <description>about</description>
     </item>
   </channel>

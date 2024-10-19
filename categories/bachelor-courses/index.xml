@@ -2,17 +2,797 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Bachelor Courses on Jiajun, Shen</title>
-    <link>http://localhost:49441/categories/bachelor-courses/</link>
+    <link>https://sjj1017.github.io/categories/bachelor-courses/</link>
     <description>Recent content in Bachelor Courses on Jiajun, Shen</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 19 Oct 2024 16:34:43 +0800</lastBuildDate>
-    <atom:link href="http://localhost:49441/categories/bachelor-courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sjj1017.github.io/categories/bachelor-courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>人工智能的数学基础</title>
+      <link>https://sjj1017.github.io/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
+      <guid>https://sjj1017.github.io/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;经验风险$R_{emp}(f(u,x)=\frac{1}{n}\sum_{i=1}^n l(f(u_i,x),v_i)$&lt;/li&gt;
+&lt;li&gt;期望风险(真实风险)：$R_{exp}(f(u, x)) = \mathbb{E}[l(f(u, x), v)]$&lt;/li&gt;
+&lt;li&gt;结构风险模型：$R_{srm}\frac{1}{n}\sum_{i=1}^n l(f(u_i,x),v_i)+\lambda J(f)$&lt;/li&gt;
+&lt;li&gt;全体数据集最好算法$f^&lt;em&gt;$，有限样本有限算法集最佳算法$\hat{h}_H$，全体数据有限算法最佳$h_H^&lt;/em&gt;$&lt;/li&gt;
+&lt;li&gt;近似误差$R_{exp}(h_H^&lt;em&gt;)-R^&lt;/em&gt;$，估算误差$R_{emp}(\hat{h}&lt;em&gt;H) − R&lt;/em&gt;{exp}(h^∗_H)$&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;最优化基础&#34;&gt;最优化基础&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;广义实值函数&#34;&gt;广义实值函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;基本概念
+&lt;ul&gt;
+&lt;li&gt;广义实值函数：映射$\mathbb{R}^n$-&amp;gt;广义函数空间$\mathbb{R}\cup{\pm\infty}$&lt;/li&gt;
+&lt;li&gt;$\alpha$-下水平集：$C_\alpha={x|f(x)\le\alpha}$，上方图$\mathrm{epi}$ $f = { (x, t) ∈ R^{n+1} |f(x) ≤ t}$&lt;/li&gt;
+&lt;li&gt;$\alpha$-下水平集是闭集&amp;lt;=&amp;gt;下半连续&amp;lt;=&amp;gt;闭函数（上方图是闭集）&lt;/li&gt;
+&lt;li&gt;对偶范数$||y||&lt;em&gt;*=sup&lt;/em&gt;{||x||\le1}x^Ty$&lt;/li&gt;
+&lt;li&gt;梯度$\nabla f(x)=[\frac{\partial f}{\partial x_1}(x),&amp;hellip;,\frac{\partial f}{\partial x_n}(x)]^T$，Hessian矩阵（$n\times n$）:$\nabla^2 f(x)$&lt;/li&gt;
+&lt;li&gt;方向导数$\partial f(x;d)=\frac{\partial d}{\partial d}(x)=\lim_{\theta\rightarrow 0 }\frac{f(x+\theta d)-f(x)}{\theta}=\nabla f(x)^T d$&lt;/li&gt;
+&lt;li&gt;二阶方向导数$d^T\nabla^2 f(x)d$，Jacobi矩阵$[J(x)]_{ij}=\frac{\partial f_i}{\partial x_j}(x)$&lt;/li&gt;
+&lt;li&gt;泰勒展开式：$f(x+d)=f(x)+\nabla f(x+td)^T d=f(x)+\nabla f(x)^T d+\frac{1}{2}d^T\nabla^2 f(x+td)d$&lt;/li&gt;
+&lt;li&gt;凸性
+&lt;ul&gt;
+&lt;li&gt;凸集：$\eta x_1+(1-\eta) x_2\in S$&lt;/li&gt;
+&lt;li&gt;凸函数$f(\eta x_1 +(1-\eta)x_2 \le \eta f(x_1)+(1-\eta)f(x_2)$&amp;lt;=&amp;gt;$f(y)\ge f(x)+\nabla f(x)^T(y-x)$&amp;lt;=&amp;gt;当且仅当在任意直线上是凸的&lt;/li&gt;
+&lt;li&gt;强凸：$\exists \mu&amp;gt;0, f(y)\ge f(x)+\nabla f(x)^T(y-x)+\frac{1}{2}\mu ||x_2-x_1||_2^2$&lt;/li&gt;
+&lt;li&gt;二阶条件$\nabla ^2 f(x)\ge 0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;利普希茨连续&#34;&gt;利普希茨连续&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;存在$L$，对于任意的$x,y\in \mathrm{dom} f$有：$||\nabla f(x)-\nabla f(y)|\le L||x-y|||$&amp;lt;=&amp;gt;$||\nabla ^2 f(x)||\le L, \forall x$&lt;/li&gt;
+&lt;li&gt;凸函数，满足利普希茨条件，则$||\nabla f(x)-\nabla f(y)||^2\le L(x-y)^T(\nabla f(x)-\nabla f(y))$&lt;/li&gt;
+&lt;li&gt;#三个等价条件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;次梯度
+&lt;ul&gt;
+&lt;li&gt;$f(y)\ge f(x)+g^T (y-x)$，称$g$为次梯度，次梯度的集合为次微分$\partial f(x)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;共轭函数
+&lt;ul&gt;
+&lt;li&gt;$f^*(y)=sup_x{y^Tx-f(x)}$
+&lt;ul&gt;
+&lt;li&gt;性质：$f(x)+f*(y)\ge x^Ty$，若$f$为闭函数，$f^{**}=f$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;优化算法与基本结构&#34;&gt;优化算法与基本结构&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;算法基本结构
+&lt;ul&gt;
+&lt;li&gt;全局最小点$f(x^&lt;em&gt;)&amp;lt;f(x)$、严格全局最小点$x^&lt;/em&gt;\ne x$&lt;/li&gt;
+&lt;li&gt;线搜索算法:&lt;/li&gt;
+&lt;li&gt;给定初始点x0∈R，置k:=0
+若在 x[k] 点终止准则成立，则 x[k] 即为求得的最优解，终止; 否则，转步 3
+根据方向计算规则，求得 x[k] 点搜索方向 d[k]
+根据步长计算规则，求得搜索步长 η[k]
+令x[k+1]=x[k]+η[k]*d[k]，置k:=k+1，转步2&lt;/li&gt;
+&lt;li&gt;终止准则：$||g^k||\le \varepsilon$或$||x^{k+1}-x^k||&amp;lt;\varepsilon$或$||f(x^{k+1})-f(x^k)||&amp;lt;\varepsilon$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;收敛速度
+&lt;ul&gt;
+&lt;li&gt;若$\lim \frac{||x^{k+1}-x^&lt;em&gt;||}{||x^k-x^&lt;/em&gt;||}=\beta$，$0=\beta$超线性收敛，$0&amp;lt;\beta&amp;lt;1$线性收敛，$\beta=1$次线性收敛&lt;/li&gt;
+&lt;li&gt;二次收敛$\lim \frac{||x^{k+1}-x^&lt;em&gt;||}{||x^k-x^&lt;/em&gt;||^2}=\beta$(任意常数)&lt;/li&gt;
+&lt;li&gt;存在$\alpha\ge 1,\beta &amp;gt;0$，当$k$足够大（与$\alpha \beta$无关），恒有$||x^{k+1}-x^&lt;em&gt;||\le \beta ||x^k-x^&lt;/em&gt;||^\alpha$&lt;/li&gt;
+&lt;li&gt;如果他对于任意正定二次函数，从任意初始点出发，可以经有限步迭代求得极小点，我们就称该算法具有二次终止性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;线搜索技术&#34;&gt;线搜索技术&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;精确线搜索法
+&lt;ul&gt;
+&lt;li&gt;Armojo准则：$d^k$是$x^k处$的下降方向，若$f(x^k+\eta d^k)\le f(x^k)+\rho \eta \nabla f(x^k)^T d^k$，则$\eta$满足Armijo准则&lt;/li&gt;
+&lt;li&gt;Armijo线搜索算法
+&lt;ul&gt;
+&lt;li&gt;选择初始步长 η，参数 ρ,γ ∈ (0,1)，初始化 η ← ηˆ
+若 ηk 满足Armijo准则，则终止计算，得步长 ηk. 否则，转步
+令ηk :=γηk，转步2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Goldstein准则：在Armijo准则基础上加上$f(x^k+\eta d^k)\ge f(x^k)+(1-\rho) \eta \nabla f(x^k)^T d^k$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;非精确线搜索
+&lt;ul&gt;
+&lt;li&gt;Wolfe 准则，它的核心思想有两个：目标函数值应该有足够的下降；可接受点处的切线斜率 ≥ 初始斜率的 σ 倍&lt;/li&gt;
+&lt;li&gt;在Armijo准则上加伤$\nabla f(x^k+\eta d^k)^T d^k\ge \sigma \nabla f(x^k)^T d^k$&lt;/li&gt;
+&lt;li&gt;非精确线搜索步长的存在性：$f(x^k + ηd^k)$ 在 $η &amp;gt; 0$ 时有下界，且 $∇f(x^k)^Td^k &amp;lt; 0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;最优化分支&#34;&gt;最优化分支&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;线性与非线性规划
+&lt;ul&gt;
+&lt;li&gt;线性规划LP：在线性等式和不等式约束下最优化一个线性目标函数&lt;/li&gt;
+&lt;li&gt;如果约束和目标函数中有一个非线性的，则问题就称为非线性规划问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二次规划QP
+&lt;ul&gt;
+&lt;li&gt;目标函数是变量的二次函数&lt;/li&gt;
+&lt;li&gt;Q半正定时QP是凸优化问题，可以用内点法在多项式时间内求解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;锥优化CO
+&lt;ul&gt;
+&lt;li&gt;非负性条件 $x ≥ 0$ 用锥包含约束替换后得到的优化问题&lt;/li&gt;
+&lt;li&gt;二阶锥$x_1^2 ⩾ x_2^2 +···+x^2_n,x_1 ⩾ 0$&lt;/li&gt;
+&lt;li&gt;对称半正定锥 $X=X^T$半正定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;整数规划ILP
+&lt;ul&gt;
+&lt;li&gt;部分或全部变量取整数的优化问题&lt;/li&gt;
+&lt;li&gt;0-1规划&lt;/li&gt;
+&lt;li&gt;混合整数规划：既有连续变量又有整数约束变量时，问题称为混合整数线性规划&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;动态规划
+&lt;ul&gt;
+&lt;li&gt;涉及递推关系的计算方法，把问题分成阶段以便进行递推优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;最优化理论&#34;&gt;最优化理论&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;Weierstrass 定理：条件任意成立一个：$\mathrm{dom f}$有界；存在常数$\bar{gamma}$使得下水平集$C_\gamma$是非空且有界的；$f$是强制的，即对于任意满足极限为$+\infty$的点列都有其函数值趋向于$+\infty$，则最优化问题的最小点集是非空且紧的&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;无约束可微优化问题&#34;&gt;无约束可微优化问题&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;下降方向：如果存在$d$满足$\nabla f(x)^Td&amp;lt;0$则$d$为一个下降方向。局部最优点处不能有下降方向。局部极小点$x^&lt;em&gt;$满足$\nabla f(x^&lt;/em&gt;)=0$(一阶必要条件)，同时$\nabla^2f(x^*)$半正定（二阶必要条件），如果二阶连续可微，那么二阶必要条件是充分条件。&lt;/li&gt;
+&lt;li&gt;假设$f$#适当 且凸，则$x^&lt;em&gt;$是局部极小点&amp;lt;=&amp;gt;$0\in \partial f(x^&lt;/em&gt;)$&lt;/li&gt;
+&lt;li&gt;对于二阶连续可微的目标函数，梯度法、牛顿法、拟牛顿法在每一次迭代均能看做是构建局部的二次模型，梯度法可以看做利用 $(1/η^k)I$作为Hessian矩阵估计，牛顿类算法利用真实Hessian矩阵，拟牛顿利用真实Hessian矩阵或逆的估计构建模型。牛顿法收敛最快计算量存储量大，梯度法相对最慢。&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;梯度类算法&#34;&gt;梯度类算法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;一般形式：$x^{k+1}=x^k+\eta_k d^k$，收敛速度：$L$-利普希茨连续时$0&amp;lt;\eta&amp;lt;\frac{1}{L}$时为$O(1/k)$，对强凸函数$0&amp;lt;\eta&amp;lt;\frac{1}{L+\eta}$时Q-线性收敛&lt;/li&gt;
+&lt;li&gt;精确线搜索、数值线性搜索法&lt;/li&gt;
+&lt;li&gt;BB方法：
+&lt;ul&gt;
+&lt;li&gt;选取$min||\eta y^{k-1}-s^{k-1}||^2$或$min|| y^{k-1}-\eta^{-1}s^{k-1}||^2$的解&lt;/li&gt;
+&lt;li&gt;$s^{k-1}=x^{k+1}-x^k$，$y^{k-1}=\nabla f(x^{k+1})-\nabla f(x^k)$&lt;/li&gt;
+&lt;li&gt;解分别为$\eta_{BB1}^k=\frac{(s^{k-1})^Ty^{k-1}} {(y^{k-1})^Ty^{k-1}}$，$\eta_{BB2}^k=\frac{(s^{k-1})^Ts^{k-1}} {(s^{k-1})^Ty^{k-1}}$&lt;/li&gt;
+&lt;li&gt;通过$η_m ⩽η_k ⩽η_M$截断过大或过小的步长，也可以使用两种步长的凸组合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;次梯度法&#34;&gt;次梯度法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代格式：$x^{k+1} = x^k − η^kg^k, g^k ∈ ∂f(x^k)$&lt;/li&gt;
+&lt;li&gt;若 $0 \notin ∂f(x)$，那么对于任意 $x^∗ ∈ argmin_x f(x)$和任意 $g ∈ ∂f(x)$，存在步长 $η &amp;gt; 0$ 使得$||x−ηg−x^&lt;em&gt;||_2^2 &amp;lt;||x−x^&lt;/em&gt;||_2^2$&lt;/li&gt;
+&lt;li&gt;若至少存在一个极小点且次梯度有界，则$\sum \eta_k(f(x^k)-f(x^&lt;em&gt;))\le \frac{1}{2}||x^0-x^&lt;/em&gt;||^2+\frac{1}{2}\sum \eta_k^2 M^2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;经典牛顿法&#34;&gt;经典牛顿法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代格式：$x^{k+1} = x^k − \nabla^2f(x^k)^{-1}\nabla f(x^k), g^k ∈ ∂f(x^k)$&lt;/li&gt;
+&lt;li&gt;极小点处梯度为0，Hessian矩阵正定，则起始点足够近时，收敛是Q-二次的且梯度的范数Q-二次收敛到0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;修正牛顿法&#34;&gt;修正牛顿法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代格式：$x^{k+1} = x^k +\eta_k d^k$&lt;/li&gt;
+&lt;li&gt;确定矩阵$E^k$使得$\nabla ^2 f(x^k)+E^k$正定且条件数较小，求解$B^kd^k=-\nabla f(x^k)$，确定步长迭代。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;非精确牛顿法&#34;&gt;非精确牛顿法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;引入残差$r^k=\nabla^2 f(x^k)d^k+\nabla f(x^k)$，$||r^k||\le \alpha_k||\nabla f(x^k)||$&lt;/li&gt;
+&lt;li&gt;若存在$t&amp;lt;1$使得$0&amp;lt;\alpha_k&amp;lt;t$则Q-线性收敛；若$\alpha_k$收敛到0，则Q-超线性收敛；若$\alpha_k=O(||\nabla f(x^k)||)$，则Q-二次收敛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;拟牛顿条件&#34;&gt;拟牛顿条件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Hessian的近似矩阵满足$y^k=B^{k+1}s^k$，逆矩阵$s^k=H^{k+1}y^k$&lt;/li&gt;
+&lt;li&gt;迭代格式：$x^{k+1}=x^k+\alpha_k d^k$，$d^k=-(B^k)^{-1}\nabla f(x^k)=-H^k\nabla f(x^k)$&lt;/li&gt;
+&lt;li&gt;SR1秩一更新
+&lt;ul&gt;
+&lt;li&gt;$B^{k+1}=B^k+\frac{(y^k-B^ks^k)(y^k-B^ks^k)^T}{(y^k-B^ks^k)^T s^k}$&lt;/li&gt;
+&lt;li&gt;$H^{k+1}=H^k+\frac{(s^k-H^ky^k)(s^k-H^ky^k)^T}{(s^k-H^ky^k)^T y^k}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;秩二更新
+&lt;ul&gt;
+&lt;li&gt;BFGS(相当于在满足割线方程的&lt;strong&gt;对称矩阵&lt;/strong&gt;中找到离 $H^k$ 最近的矩阵)
+&lt;ul&gt;
+&lt;li&gt;利用割线方程$Ws^k=y^k$&lt;/li&gt;
+&lt;li&gt;$B^{k+1}=B^k+\frac{y^k(y^k)^T}{(s^k)^T y^k}-\frac{B^k s^k(B^ks^k)^T}{(s^k)^T B^ks^k}$&lt;/li&gt;
+&lt;li&gt;$H^{k+1}=(I-\rho_k y^k(s^k)^T)^TH^{k}(I-\rho_k y^k(s^k)^T)+\rho_ks^k(s^k)^T, \rho=\frac{1}{s^T y}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DFP方法，和BFGS为对偶关系
+&lt;ul&gt;
+&lt;li&gt;$Wy^k=s^k$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;收敛性质
+&lt;ul&gt;
+&lt;li&gt;Zoutendijk 条件：满足Wolfe准则的一般迭代格式，有下界、连续可微、梯度利普希茨连续，则$\sum_{k=0}^\infty \cos^2(\theta_k)||\nabla f(x^k)||^2&amp;lt;\infty$，$\cos\theta_k=\frac{-\nabla f(x^k)^T d^k}{||\nabla f(x^k)^T ||||d^k||}$&lt;/li&gt;
+&lt;li&gt;BFGS 全局收敛性：初始矩阵$B^0$对称正定，目标函数连续可微，对$f(x^0)$下水平集凸，且存在正数$m$以及$M$对任意$x,z$有$m||z||^2\le z^T \nabla ^2 f(x)z \le M||z||^2$，则 BFGS 格式结合 Wolfe 线搜索的拟牛顿算法全局收敛到极小值点&lt;/li&gt;
+&lt;li&gt;BFGS 收敛速度：目标二阶连续可微，最优点邻域Hessian矩阵利普希茨连续，BFGS收敛，误差之和小于正无穷，则Q-超线性收敛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;约束优化最优性理论&#34;&gt;约束优化最优性理论&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;拉格朗日函数$L(x,\lambda,\nu)=f(x)+\sum_{i\in I} \lambda_i c_i(x)+\sum_{i \in E} \nu_i c_i(x)$&lt;/li&gt;
+&lt;li&gt;对偶函数$g(\lambda, \nu)=\inf_x L(x,\lambda,\nu)$是凸函数，给出原优化问题的下界$g(\lambda,\nu)\le p^*$&lt;/li&gt;
+&lt;li&gt;最优下界$\max g(\lambda,\nu)=max_{\lambda\ge 0,v}\inf_x L(x,\lambda,\nu)$
+&lt;ul&gt;
+&lt;li&gt;$domg = {(λ,ν) | λ ≥ 0,g(λ,ν) &amp;gt; −∞}$，当 $(λ, ν) ∈ \mathrm{dom}  g$ 时，称为对偶可行解，对偶问题的最优值为 $q^∗$.称 $p^∗ − q^∗(≥ 0)$ 为对偶间隙，对偶间隙为零，则强对偶原理成立&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;拉格朗日函数不动点$\nabla_x L(x^&lt;em&gt;,\lambda_1^&lt;/em&gt;)=0$是必需但不充分的&lt;/li&gt;
+&lt;li&gt;某点$x^&lt;em&gt;$不存在一阶可行下降方向时，$\nabla_x L(x^&lt;/em&gt;,\lambda_1^&lt;em&gt;)=0,\lambda_1^&lt;/em&gt;\ge 0$且(互补松弛条件：)$\lambda_1^&lt;em&gt;c_1(x^&lt;/em&gt;)=0$&lt;/li&gt;
+&lt;li&gt;切锥$T_X(x)$：切向量$d=\lim_{k\rightarrow \infty}\frac{z_k-x}{t_k}$的集合，最优化要求切锥(可行方向集合)不包含使得目标函数值下降的方向&lt;/li&gt;
+&lt;li&gt;几何最优性条件：对局部极小点的可行点，目标和约束函数可微，则$d^T\nabla f(x^&lt;em&gt;)\ge 0, \forall d \in T_X(x^&lt;/em&gt;)$&amp;lt;=&amp;gt;$T_X(x^&lt;em&gt;)\cap{d|\nabla f(x^&lt;/em&gt;)^T d&amp;lt;0}=\varnothing$&lt;/li&gt;
+&lt;li&gt;线性化可行锥：$F(x)={d|d^T∇c_i(x) = 0, ∀ i ∈ E； d^T∇c_i(x)≤0,∀i∈A(x)∩I}$，积极集$A(x)=E∪{i∈I : c_i(x)=0}$&lt;/li&gt;
+&lt;li&gt;线性无关约束规格：给定可行点 $x$ 及相应的积极集 $A(x)$. 如果积极集对应的约束函数的梯度, 即 $∇c_i(x), i ∈ A(x)$, 是线性无关的, 则称线性无关约束规格 (LICQ) 在点 $x$ 处成立，如果LICQ 成立，则有 $T_X (x) = F (x)$&lt;/li&gt;
+&lt;li&gt;MFCQ：如果存在一个向量 $w ∈ R^n$, 使得$∇c_i(x)^Tw &amp;lt; 0, ∀i ∈ A(x) ∩ I;∇c_i(x)^Tw = 0, ∀i ∈ E$，并且等式约束对应的梯度集 ${∇c_i(x), i ∈ E}$是线性无关的，则称 MFCQ 在点 x 处成立&lt;/li&gt;
+&lt;li&gt;KKT条件：（如果局部极小点处有$T_X (x^∗) = F (x^∗)$）
+&lt;ul&gt;
+&lt;li&gt;稳定性条件$\nabla_x L(x^&lt;em&gt;,\lambda^&lt;/em&gt;)=\nabla f(x^&lt;em&gt;)+\sum_{i\in I\cup E} \lambda_i^&lt;/em&gt;\nabla c_i(x^*)=0$&lt;/li&gt;
+&lt;li&gt;原始可行性条件 $c_i (x^∗) = 0, ∀i ∈ E,$^&lt;/li&gt;
+&lt;li&gt;原始可行性条件 $c_i (x^∗) ⩽ 0, ∀i ∈ I$&lt;/li&gt;
+&lt;li&gt;对偶可行性条件 $λ^∗_i ⩾0,∀i∈I$&lt;/li&gt;
+&lt;li&gt;互补松弛条件 $λ^∗_i c_i (x^∗) = 0,∀i ∈ I$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二阶最优性条件：
+&lt;ul&gt;
+&lt;li&gt;二阶必要条件：如果局部最优解处处有$T_X (x^∗) = F (x^∗)$，$(x^&lt;em&gt;,\lambda^&lt;/em&gt;)$满足KKT条件，则$d^T∇^2_{xx}L(x^∗,λ^∗)d ⩾ 0, ∀d ∈ C (x^∗,λ^∗)$&lt;/li&gt;
+&lt;li&gt;二阶充分条件：$d^T∇^2_{xx}L(x^∗,λ^∗)d&amp;gt;0, ∀d∈C(x^∗,λ^∗),d\ne0$，那么 $x^∗$ 为一个严格局部极小解.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;约束优化方法&#34;&gt;约束优化方法&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;二次罚函数法&#34;&gt;二次罚函数法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;等式二次罚函数
+&lt;ul&gt;
+&lt;li&gt;$P_E(x,\sigma)=f(x)+\frac{1}{2}\sigma \sum_{i\in E}c_i^2(x)，\sigma&amp;gt;0$&lt;/li&gt;
+&lt;li&gt;给定 σ1 &amp;gt; 0,x0,k ← 1.罚因子增长系数 ρ &amp;gt; 1;
+while 未达到收敛准则 do
+以 xk 为初始点，求解 x[k+1] = argmin PE (x, σk);
+选取 σ[k+1] = ρ*σ[k];
+k ← k + 1;
+end&lt;/li&gt;
+&lt;li&gt;收敛性：
+&lt;ul&gt;
+&lt;li&gt;设 $x^{k+1}$ 是 $P_E (x, σ^k)$ 的全局极小解, $σ^k$ 单调上升趋于无穷, 则 $x^k$ 的每个极限点$x^∗$都是原问题的全局极小解&lt;/li&gt;
+&lt;li&gt;$\sigma c_i\rightarrow -\lambda_i^*$（一定条件下）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不等式二次罚函数
+&lt;ul&gt;
+&lt;li&gt;$P_I(x,\sigma)=f(x)+\frac{1}{2}\sigma \sum_{i\in I}\tilde{c}_i^2(x)，\sigma&amp;gt;0, \tilde{c}_i(x)=\max{c_i(x),0}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一般约束的二次罚函数
+&lt;ul&gt;
+&lt;li&gt;$P(x,\sigma)=f(x)+\frac{1}{2}\sigma (\sum_{i\in I}\tilde{c}&lt;em&gt;i^2(x)+\sum&lt;/em&gt;{i\in E}c_i^2(x))$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;内点罚函数常用对数&#34;&gt;内点罚函数（常用对数）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$P_I(x,\sigma)=f(x)-\sigma \sum_{i\in I}\ln(-c_i(x))$( 罚因子逐渐缩小，系数$\rho$)&lt;/li&gt;
+&lt;li&gt;收敛性：$|\sigma_k\sum_{i \in I}(-c_i(x^{k+1})|\le \varepsilon$（实际上极限为0）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;精确罚函数法&#34;&gt;精确罚函数法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$l_1$&lt;strong&gt;罚函数&lt;/strong&gt;：$P(x,\sigma)=f(x)+\frac{1}{2}\sigma (\sum_{i\in I}\tilde{c}&lt;em&gt;i(x)+\sum&lt;/em&gt;{i\in E}|c_i(x)|)$&lt;/li&gt;
+&lt;li&gt;当罚因子充分大 $σ&amp;gt;||λ^*||_∞$(不需要是正无穷) 时，原问题的极小值点就是罚函数的极小值点&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;增广拉格朗日函数法&#34;&gt;增广拉格朗日函数法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;等式约束
+&lt;ul&gt;
+&lt;li&gt;增广拉格朗日函数$L_\sigma(x,\lambda)=f(x)+\sum_{i\in E}\lambda_i c_i(x)+\frac{1}{2}\sigma \sum_{i\in E}c_i^2(x)$&lt;/li&gt;
+&lt;li&gt;初始坐标、乘子、罚因子及其更新常数，约束违反常数，精度，迭代步数
+for k=.. do
+从初始点求解增广拉格朗日函数最小值解，精度条件：梯度范数小于精度
+if 等式约束满足精度 then 返回近似解，终止
+else 更新乘子、罚因子
+end&lt;/li&gt;
+&lt;li&gt;罚因子更新$σ_{k+1} = ρσ{k}$，乘子更新$λ^{k+1}_i=λ^k_i+σ_i c_i (x^{k+1})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一般约束约束
+&lt;ul&gt;
+&lt;li&gt;引入松弛变量，$L(x,s,\lambda,\mu)=f(x)+\sum_{i\in E}\lambda_i c_i(x)+ \sum_{i\in I}\mu_i (c_i(x)+s_i)$，$s_i\ge 0$；$p(x,s)=\sum_{i\in E}c_i^2(x)+\sum_{i \in I}(c_i(x)+s_i)^2$&lt;/li&gt;
+&lt;li&gt;增广拉格朗日函数：$L_\sigma (x,s,\lambda,\mu)=L+p(x,s)$&lt;/li&gt;
+&lt;li&gt;取最优的$s_i=\max{-\frac{\mu_i}{\sigma_k}-c_i(x),0}$，原问题等价于优化$L_\sigma (x,\lambda,\mu)$&lt;/li&gt;
+&lt;li&gt;初始坐标、乘子、罚因子及其更新常数，约束违反常数e，精度，常数alpha和beta、迭代步数
+for k=.. do
+从初始点求解增广拉格朗日函数最小值解，精度条件：梯度范数小于精度
+if 约束违反度小与ek then
+if 约束违反度小于违反度常数e 且梯度范数小于精度 then
+返回近似解，终止
+else 更新两个乘子、罚因子不变，减小精度条件和约束违反度
+else 乘子不变，更新罚因子，调整误差和约束违反度
+end&lt;/li&gt;
+&lt;li&gt;乘子更新$E:\lambda_i^{k+1}=\lambda_i^k \sigma_k c_i(x^{k+1})$，$I:\mu_i^{k+1}=\max{\mu_i^k +\sigma_k c_i(x^{k+1}),0}$&lt;/li&gt;
+&lt;li&gt;误差和约束违反度：$\eta_{k+1}=\frac{\eta_k}{\sigma_{k+1}}，\varepsilon_{k+1}=\frac{\varepsilon_k}{\sigma_{k+1}^\beta}$或$\eta_{k+1}=\frac{1}{\sigma_{k+1}}，\varepsilon_{k+1}=\frac{1}{\sigma_{k+1}^\alpha}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;凸优化问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;交替方向乘子法admm&#34;&gt;交替方向乘子法ADMM&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;对于优化$f_1(x)+f_2(x), A_1x_1+A_2x_2=b$，&lt;/li&gt;
+&lt;li&gt;增广拉格朗日函数$L_\rho(x_1,x_2,y)=f_1(x_1)+f_2(x_2)+y^T(A_1x_1+A_2x_2-b)+\frac{\rho}{2}||A_1x_1+A_2x_2-b||^2_2$，&lt;/li&gt;
+&lt;li&gt;[[乘子更新]]$y^{k+1}=y^k+\tau\rho (A_1x_1^{k+1}+A_2x_2^{k+1}-b)$&lt;/li&gt;
+&lt;li&gt;交替求极小：$x_1^{k+1}=\argmin L_\rho (x_1,x_2^k,y^k)$；$x_2^{k+1}=\argmin L_\rho (x_1^{k+1},x_2,y^k)$；[[乘子更新]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;随机一阶优化方法&#34;&gt;随机一阶优化方法&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;随机梯度类算法&#34;&gt;随机梯度类算法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;随机梯度法
+&lt;ul&gt;
+&lt;li&gt;迭代格式$x^{k+1}=x^k-\eta_k \nabla f_{ik}(x^k)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;小批量随机梯度法
+&lt;ul&gt;
+&lt;li&gt;迭代格式$x^{k+1}=x^k-\eta\nabla f _{S_k}(x^k), \nabla f &lt;em&gt;{S_k}(x^k)=\frac{1}{|S_k|}\sum&lt;/em&gt;{i\in S_k }\nabla f_i(x^k)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;随机动量法&#34;&gt;随机动量法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代格式：$v^k=\beta_k v^{k-1}+\nabla f_{i_k}(x^k), x^{k+1}=x^k-\eta_k v^k$&lt;/li&gt;
+&lt;li&gt;等价于重球法$x^{k+1}=x^k-\eta_k \nabla f_{i_k}(x^k)+\hat{\beta}_k(x^k-x^{k-1})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;随机次梯度法&#34;&gt;随机次梯度法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代格式： $x^{k+1} = x^k − η_kg^k, g^k ∈ ∂f_{i_k} (x^k)$,&lt;/li&gt;
+&lt;li&gt;当满足$\sum \eta_k =+\infty, \frac{\sum_{1\sim K-1}}{\eta_k^2}{\sum_{1\sim K-1}}{\eta_k}\rightarrow 0$时算法收敛&lt;/li&gt;
+&lt;li&gt;函数的渐近表现很脆弱，这种算法结构很难实现并行化，当问题规模较大时，算法执行时间长&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;随机方差缩减类方法&#34;&gt;随机方差缩减类方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$SGD_&lt;em&gt;$：$x^{k+1}=x^k-\eta(\nabla f_{i_k}(x^k)-\nabla f_{i_k}(x^&lt;/em&gt;))$&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;动态抽样方法&#34;&gt;动态抽样方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;范数测试、内积测试、锐角测试&lt;/li&gt;
+&lt;li&gt;分层抽样方法：将训练样本分类，每一类独立采样子集
+&lt;ul&gt;
+&lt;li&gt;$x^{k+1}=x^k-\frac{\eta_k}{n}\sum_{i=1}^{t}\frac{n_i^k}{b_i^k}\sum_{s\in B_i^k} \nabla f_s(x^k)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;sag算法&#34;&gt;SAG算法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;全梯度的估计$\bar{g}^k=\frac{1}{n}\sum_{j=1}^n v_j^k$&lt;/li&gt;
+&lt;li&gt;迭代时$v_j^{k+1}=\nabla f_{i_k}(x_k)\quad \mathrm{if} j=i_k ,\mathrm{else}: v_j^k$，即更新之后将抽取的样本对应的随机梯度改为当前的随机梯度值&lt;/li&gt;
+&lt;li&gt;由于每次只有一部分改变，可以写成$\bar{g}^k=\bar{g}^{k-1}-\frac{1}{n}v_{i_k}^{k-1}+\frac{1}{n}v_{i_k}^k$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;saga算法&#34;&gt;SAGA算法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;SAGA 算法选择一个参考点$\bar{x}^i,v_i=\nabla f_i(\bar{x}^i)$&lt;/li&gt;
+&lt;li&gt;$g^k=\nabla f_{i_k}(x^k)-\nabla f_{i_k}(\bar{x}^{i_k})+\frac{1}{n}\sum_{j=1}^n \nabla f_j(\bar{x}_j)$&lt;/li&gt;
+&lt;li&gt;x&lt;/li&gt;
+&lt;li&gt;线性收敛速度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;svrg算法&#34;&gt;SVRG算法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;每经过几次迭代之后设置检查点，计算全梯度作为参考
+&lt;ul&gt;
+&lt;li&gt;$\nabla f(x^j)=\frac{1}{n}\sum_{i=1}^n \nabla f_i(x^j)$&lt;/li&gt;
+&lt;li&gt;$v^k=\nabla f_{i_k}(x^k)-(\nabla f_{i_k}(x^j)-\nabla f(x^j))$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对于参考点的函数值期望的意义下线性收敛速度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;随机递归梯度法sarah&#34;&gt;随机递归梯度法SARAH&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;梯度估计的更新$v^k=\nabla f_{i_k}(x^k)-\nabla f_{i_k}(x^{k-1})+v^{k-1} , v^0=$全梯度&lt;/li&gt;
+&lt;li&gt;不是无偏估计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;带bb步长的方差缩减类&#34;&gt;带BB步长的方差缩减类&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;adagrad&#34;&gt;AdaGrad&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$x^{k+1}=x^k-\frac{\eta}{\sqrt{G^k+\varepsilon 1_n}}\circ g^k$&lt;/li&gt;
+&lt;li&gt;$G^{k+1}=G^k+g^k \circ g^k$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;rmsprop&#34;&gt;RMSProp&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$x^{k+1}=x^k-\frac{\eta}{\sqrt{M^k+\varepsilon 1_n}}\circ g^k$&lt;/li&gt;
+&lt;li&gt;$G^{k+1}=\rho G^k+(1-\rho)g^{k+1} \circ g^{k+1}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;adam&#34;&gt;Adam&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;梯度$g^k=\nabla f_i (x^k)$&lt;/li&gt;
+&lt;li&gt;一阶矩$S^k=\rho_1 S^{k-1}+(1-\rho_1)g^k$&lt;/li&gt;
+&lt;li&gt;二阶矩$M^k=\rho_2 M^{k-1}+(1-\rho_2)g^k\circ g^k$&lt;/li&gt;
+&lt;li&gt;一阶矩修正$\hat{S}^k=\frac{S^k}{1-\rho_1^k}$&lt;/li&gt;
+&lt;li&gt;二阶矩修正$\hat{M}^k=\frac{M^k}{1-\rho_2^k}$&lt;/li&gt;
+&lt;li&gt;$x^{k+1}=x^k-\frac{\eta}{\sqrt{\hat{M}^k+\varepsilon 1_n}}\circ \hat{S}^k$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;adabelief&#34;&gt;AdaBelief&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;修改二阶矩的计算
+&lt;ul&gt;
+&lt;li&gt;$Q^k=\rho_2 Q^{k-1}+(1-\rho_2)(g^k-S^k)\circ (g^k-S^k)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;修正二阶矩偏差时加入额外的$\varepsilon$保证有下界
+&lt;ul&gt;
+&lt;li&gt;$\hat{Q}^k=\frac{Q^k+\varepsilon}{1-\rho_2^k}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AdaBelief 算法在“大梯度，小曲率”情况下有优势&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>复杂系统决策智能</title>
+      <link>https://sjj1017.github.io/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</link>
+      <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
+      <guid>https://sjj1017.github.io/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</guid>
+      <description>&lt;h3 id=&#34;绪论&#34;&gt;绪论&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;最优化问题
+&lt;ul&gt;
+&lt;li&gt;分类：变量个数、性质、约束、极值个数、目标个数、线性和非线性、确定/随机/模糊、静态/动态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;函数优化问题与组合优化问题&lt;/li&gt;
+&lt;li&gt;P（多项式时间内判定或解出）、NP（多项式时间内验证）、NPC问题&lt;/li&gt;
+&lt;li&gt;计算智能方法
+&lt;ul&gt;
+&lt;li&gt;逻辑主义、行为主义、联结主义&lt;/li&gt;
+&lt;li&gt;神经计算、模糊计算、进化计算（遗传、粒子群）、单点搜索（模拟退火、禁忌搜索）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;神经网络&#34;&gt;神经网络&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;基本特征：神经元及其联结、联结强度决定信号传递强弱、强度可以随着训练改变、信号可以起刺激作用或抑制作用、接收信号的累积效果决定状态、每个神经元有一个阈值&lt;/li&gt;
+&lt;li&gt;基本原理：输入层、加权和、阈值函数、输出层&lt;/li&gt;
+&lt;li&gt;单层感知器网络、前馈型网络、前馈内层互联网络、循环网（短期记忆特征，稳定，反馈信号引起的变化会减小并消失）、反馈型网络、全互联网络&lt;/li&gt;
+&lt;li&gt;学习算法：
+&lt;ul&gt;
+&lt;li&gt;有监督（实际输出与期望输出的偏差）和无监督（仅仅根据其输入
+调整连接权系数和阈值）&lt;/li&gt;
+&lt;li&gt;梯度下降算法：一般来说，只能找到一个局部最小点(多解)，收敛速度较慢，算法结构简单
+&lt;ul&gt;
+&lt;li&gt;最速下降法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BP神经网络：初始化网络权值、向前传播输入、反向误差传播、网络权值调整&lt;/li&gt;
+&lt;li&gt;BRF神经网络：
+&lt;ul&gt;
+&lt;li&gt;求取基函数中心：网络初始化，选取聚类中心，将输入的样本按最近邻分组，计算各个聚类集合的平均值得到新的聚类中心。&lt;/li&gt;
+&lt;li&gt;求解方差&lt;/li&gt;
+&lt;li&gt;计算隐含层和输出层之间的权值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;卷积神经网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;模糊逻辑&#34;&gt;模糊逻辑&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;模糊集合
+&lt;ul&gt;
+&lt;li&gt;可以部分地属于，对于U上一个元素u， f(u)叫做u对于模糊集的隶属度，也可写作 A(u)&lt;/li&gt;
+&lt;li&gt;Zadeh表示法$A=\sum \frac{f_A(u)}{u}|A=\int_u \frac{f_A(u)}{u}$&lt;/li&gt;
+&lt;li&gt;序对表示法$A={(u,f_A(u))|u\in U}$&lt;/li&gt;
+&lt;li&gt;子集：对任意元素都有$f_A(u)&amp;lt;f_B(u)$则$A$是$B$的子集&lt;/li&gt;
+&lt;li&gt;交：取最小，并：取最大，补：用1减&lt;/li&gt;
+&lt;li&gt;隶属度函数呈单峰馒头形（(凸模糊集合）&lt;/li&gt;
+&lt;li&gt;模糊变量的标称值选择一般取3—9个为宜，通常取奇数 (平衡)——在“零”、“适中”或者“合适”集合的两边语言值通常取对称(如速度适中，一边取“速度高”，一般另一 边取“速度低”，满足对称)。&lt;/li&gt;
+&lt;li&gt;隶属度函数要符合人们的语义顺序，避免不恰当的重叠，在相同的论域上使用的具有语义顺序关系的若干标称的模 糊集合，应该合理的排列。下面的排列是错误的。&lt;/li&gt;
+&lt;li&gt;模糊统计法：隶属频率=属于A的次数/总次数&lt;/li&gt;
+&lt;li&gt;例证法：由已知的有限个隶属函数的值， 来估计论域U上的模糊子集A的隶属函数。&lt;/li&gt;
+&lt;li&gt;专家经验法、二元对比排序法&lt;/li&gt;
+&lt;li&gt;大概三类图形：
+&lt;ul&gt;
+&lt;li&gt;左大右小的偏小型下降函数(Z函数&lt;/li&gt;
+&lt;li&gt;左小右大的偏大型上升函数(S函数)&lt;/li&gt;
+&lt;li&gt;对称型凸函数(II函数)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;模糊关系
+&lt;ul&gt;
+&lt;li&gt;$U\times V={(u,v)|u\in U,v\in V}, (u,v)\rightarrow{}R(u,v)$&lt;/li&gt;
+&lt;li&gt;模糊矩阵&lt;/li&gt;
+&lt;li&gt;模糊关系的复合&lt;/li&gt;
+&lt;li&gt;极大-极小复合$R_1R_2={[(x,z),\max_y \min[\mu_{R1}(x,y),\mu_{R2}(y,z)]]}$($R_1,R_2$在$X\times Y$和$Y\times Z$)&lt;/li&gt;
+&lt;li&gt;极大-乘积复合$R_1R_2={[(x,z),\max_y [\mu_{R1}(x,y)*\mu_{R2}(y,z)]]}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;模糊推理
+&lt;ul&gt;
+&lt;li&gt;语言变量的取值就是模糊集合。语言算子&lt;/li&gt;
+&lt;li&gt;T(年纪)={年轻，不年轻，不很年轻,&amp;hellip;, 中年，不是中年,&amp;hellip;,年老，非常年老,&amp;hellip;, 不年轻也不老,&amp;hellip;.}，其中“年纪”是语言变量。&lt;/li&gt;
+&lt;li&gt;(x,T(x),X,G,M)：其中x是语言变量名;T(x)为语言变量x的语言值或语言术语集合;X为语言变量x的论域;G为产生T(x)中术语的句法规则，用于产生语言变量值的;M是赋予每 个语言值A以含义M(A)的语法规则，即隶属度函数。&lt;/li&gt;
+&lt;li&gt;模糊推理是通过模糊规则将输入转化为输出的过程。在模糊推理中，小前提没有必要与大前提的前件 一致(A与C不必完全一致)，结论没有必要与大前提的后件一致(B与D不必完全一致)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;遗传算法&#34;&gt;遗传算法&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模式&lt;/strong&gt;：模式指群体中编码的某些位置具有相似结构的染色体集合，模式的阶指模式中具有确定取值的基因个数，模式的定义长度指模式中第一个具有确定取值的基因到最后一个具有确定取值的基因的距离 (把中间的空格当作距离)&lt;/li&gt;
+&lt;li&gt;染色体编码：
+&lt;ul&gt;
+&lt;li&gt;$2^L=\frac{U_{max}-U_{min}}{\delta}+1$，$U=U_{min}+\frac{(U_{max}-U_{min})X}{2^L-1}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;群体初始化
+&lt;ul&gt;
+&lt;li&gt;随机数初始化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;适应性评价
+&lt;ul&gt;
+&lt;li&gt;评估函数用于评估各个染色体的适应值，进而区分优劣&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;选择算子
+&lt;ul&gt;
+&lt;li&gt;轮盘赌方法选择，选中概率与适应度大小成正比$P_i=\frac{F(x_i)}{\sum F(x_i)}$&lt;/li&gt;
+&lt;li&gt;选择概率和积累概率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交配算子
+&lt;ul&gt;
+&lt;li&gt;交配概率$P_c$&lt;/li&gt;
+&lt;li&gt;将选择出的种群中的M个个体以随机的方式组成 M/2对配对个体组，交配操作就是在这些配对个体组中的两个个体之间进行&amp;mdash;随机配对&lt;/li&gt;
+&lt;li&gt;单点交叉（选一个交叉点，一半交叉）、多点交叉、均匀交叉（对每一个基因位随机交换或不交换）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;变异算子
+&lt;ul&gt;
+&lt;li&gt;变异概率$P_m$&lt;/li&gt;
+&lt;li&gt;与个体编码串长度等长的屏蔽字，确定哪些位变异&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;粒子群算法&#34;&gt;粒子群算法&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;初始化，随机初始化速度和位置&lt;/li&gt;
+&lt;li&gt;速度位置更新，惯量权重$\omega$，加速系数$c_i$，随机数$r_i$
+&lt;ul&gt;
+&lt;li&gt;$v_i=\omega v_i +c_1r_1(p_{Best_i}-x_i) +c_2r_2(g_{Best}-x_i)$&lt;/li&gt;
+&lt;li&gt;$x_i=x_i+v_i$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;评估粒子的适应度函数值，更新粒子最优位置和全局最优位置&lt;/li&gt;
+&lt;li&gt;结束条件：gBest差值小于精度&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;贝叶斯网络&#34;&gt;贝叶斯网络&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;全概率公式、贝叶斯公式&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;贝叶斯网络-1&#34;&gt;贝叶斯网络&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;原因节点：没有连线以他们为终点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;贝叶斯网络的预测&#34;&gt;贝叶斯网络的预测&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;自顶向下的过程&lt;/li&gt;
+&lt;li&gt;把证据向量输入到贝叶斯网络B中;&lt;/li&gt;
+&lt;li&gt;对于B中的每一个没处理过的结点n，如果它具有发生的事实(证据)，则标记它为已经处理过；否则继续下面的步骤&lt;/li&gt;
+&lt;li&gt;如果它的所有父结点中有一个没有处理过，则不处理这个结点(保证自顶向下);否则，继续下面的步骤&lt;/li&gt;
+&lt;li&gt;根据结点n的所有父结点的概率以及条件概率或联合条件概 率计算结点n的概率分布，并把结点n标记为已处理&lt;/li&gt;
+&lt;li&gt;重复步骤(2)~(4)共m次。此时，结点t的概率分布就是
+它的发生/不发生的概率。算法结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;贝叶斯网络诊断&#34;&gt;贝叶斯网络诊断&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;把证据向量输入到贝叶斯网络B中&lt;/li&gt;
+&lt;li&gt;对于B中的每一个没处理过的结点n，如果它具有发生的事实(证据)，则标记它为已经处理过；否则继续面的步骤&lt;/li&gt;
+&lt;li&gt;如果它的所有子结点中有一个没有处理过，则不处理这个结点(保证自底向上)；否则，继续下面的步骤&lt;/li&gt;
+&lt;li&gt;根据节点n所有子结点的概率以及条件概率或联合条件概率，根据条件概率公式，计算结点n的概率分布，并把结点n标记为已处理;&lt;/li&gt;
+&lt;li&gt;重复步骤共m次。此时，原因结点t的概率分布就是它的发生/不发生的概率。算法结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;贝叶斯网络训练&#34;&gt;贝叶斯网络训练&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在两个结点之间建立连线时，要防止环的出现，因为贝叶斯网络必须是无环图&lt;/li&gt;
+&lt;li&gt;通过历史数据获得贝叶斯网络中各结点的概率以及结点之间条件概率的过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;static-optimization&#34;&gt;STATIC OPTIMIZATION&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;无约束优化问题
+&lt;ul&gt;
+&lt;li&gt;$L=\frac{1}{2}u^T Qu+S^T u$=&amp;gt;$u*=-Q^{-1}S$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;等式约束优化
+&lt;ul&gt;
+&lt;li&gt;方法一：
+&lt;ul&gt;
+&lt;li&gt;$dL=L_u^T du+L_x^T dx$,$df=f_udu+f_xdx$&lt;/li&gt;
+&lt;li&gt;$dL/du=L_u-f_u^Tf_x^{-T}L_x=0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方法二：
+&lt;ul&gt;
+&lt;li&gt;\[ \begin{bmatrix}  dL\df  \end{bmatrix} =\begin{bmatrix}  L_x^T&amp;amp;L_u^T\f_x&amp;amp;f_u  \end{bmatrix}\begin{bmatrix}  dx\du  \end{bmatrix}=0 \]&lt;/li&gt;
+&lt;li&gt;\[\begin{bmatrix}  1&amp;amp;\lambda^T  \end{bmatrix} \begin{bmatrix}  L_x^T&amp;amp;L_u^T\f_x&amp;amp;f_u  \end{bmatrix}=0, \quad \frac{\partial L}{\partial f}|_{du=0}-\lambda \]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方法三：
+&lt;ul&gt;
+&lt;li&gt;$H(x,u,\lambda)=L(x,u)_\lambda^Tf(x,u)$&lt;/li&gt;
+&lt;li&gt;$H_u=H_x=H_\lambda=0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Effect of Changes in Constraints
+&lt;ul&gt;
+&lt;li&gt;约束改变$\mathrm{d}f$，则$\mathrm{d}x=f_x^{-1}(I+f_u C)\mathrm{d}f$，$\mathrm{d}u=-(L_{uu}^{f})^{-1}(H_{ux}-f^T_u f^{-T}&lt;em&gt;x H&lt;/em&gt;{xx})f_x^{-1}\mathrm{d}f$&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;约束优化：
+&lt;ul&gt;
+&lt;li&gt;初始点$u$&lt;/li&gt;
+&lt;li&gt;确定$x$: $f(x,u)=0$&lt;/li&gt;
+&lt;li&gt;确定乘子$\lambda=-f_x^{-T}L_x$&lt;/li&gt;
+&lt;li&gt;确定梯度$H_u=L_u+f_u^T\lambda$&lt;/li&gt;
+&lt;li&gt;更新$\Delta u=-\alpha H_u$&lt;/li&gt;
+&lt;li&gt;计算$\Delta L=H_u^T \Delta u$，根据要求回第二步。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;动态规划方法&#34;&gt;动态规划方法&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;难点：离散化模型面临维数灾难、HJB 方程一般难以求解、HJB 方程对值函数有可微的要求&lt;/li&gt;
+&lt;li&gt;最优性原理：多级决策过程的最优策具有如下性质:不论初始状态和初始决策如何，其余的决策对于由初始决策所形成的状态来说，必定也是一个最优策略。&lt;/li&gt;
+&lt;li&gt;动态规划求解最短路径，从终点开始向后求解。&lt;/li&gt;
+&lt;li&gt;动态规划求解离散最优控制
+&lt;ul&gt;
+&lt;li&gt;离散化时间：$t_k\in [t_0+k\Delta t,t_0+(k+1)\Delta t]$&lt;/li&gt;
+&lt;li&gt;离散化状态方程$：\dot{x}(t)=f(x(t),u(t),t),x(t_0)=x_0$; $x(k+1)=f_D(x(k),u(k),k)$&lt;/li&gt;
+&lt;li&gt;离散化性能指标：$J=h_D(x(N),N)+\sum_{k=0}^{N-1}g_D(x(k),u(k),k)$&lt;/li&gt;
+&lt;li&gt;Bellman 方程
+&lt;ul&gt;
+&lt;li&gt;最优控制下的性能 $V(x_0,k_0)$，Bellman方程是充要条件：$V(x(k),k)=min_{u(k)\in U}{g_D(x(k),u(k),k)+V(x(k+1),k+1) }$, $V(x(N),N)=h_D(x(N),N)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;直接迭代求解&#34;&gt;直接迭代求解&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;从后往前依次求解$u(k)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;遍历离散状态和离散控制空间&#34;&gt;遍历离散状态和离散控制空间&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;将$x(k)$离散化为$x^0,&amp;hellip;,x^{s-1}$，$u(k)=u^0,&amp;hellip;,u^{c-1}$&lt;/li&gt;
+&lt;li&gt;$V(x(k), k) = min {g_D(x(k), u(k), k) + V(x(k + 1), k + 1)}$&lt;/li&gt;
+&lt;li&gt;查表：直接寻找距离最近的&lt;/li&gt;
+&lt;li&gt;插值计算：不直接查表，使用插值近似&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;遍历当前和下时刻离散状态空间&#34;&gt;遍历当前和下时刻离散状态空间&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;每个时刻求解析解，只需要遍历离散化的状态$x(k),x(k+1)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;连续$J(u,x_0,t_0)=h(x(x_f),t_f)+\int_{t_0}^{t_f} g(x(t),u(t),t)\mathrm{d}t$
+&lt;ul&gt;
+&lt;li&gt;最优控制充要条件HJB方程：$-V_t(x(t),t)=\min H(x(t),u(t),V^T_x(x(t),t),t)$=&amp;gt;$V_t+\min_u{V_x^T \dot{x} +g(x,u,t)     }=0$&lt;/li&gt;
+&lt;li&gt;边界条件$V(x(t_f),t_f)=h(x(t_f),t_f)$&lt;/li&gt;
+&lt;li&gt;没有终值可以增加一个罚函数项&lt;/li&gt;
+&lt;li&gt;值函数不可微的情况：分片考虑依然满足HJB方程，可验证是充分条件.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;自适应动态规划&#34;&gt;自适应动态规划&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;无限域最优控制问题动态规划，无法从终点开始&lt;/li&gt;
+&lt;li&gt;自适应动态规划方法由三个网络组成：模型网络、评判网络、执行网络&lt;/li&gt;
+&lt;li&gt;$x(k)$-&amp;gt;Action Network-&amp;gt;$u(k)$;&lt;/li&gt;
+&lt;li&gt;$u(k),x(k)$-&amp;gt;Model Network-&amp;gt;$x(k+1)$;&lt;/li&gt;
+&lt;li&gt;$x(k+1)$-&amp;gt;Critic Network-&amp;gt;$J(x(k+1))$;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>理论计算机</title>
-      <link>http://localhost:49441/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <link>https://sjj1017.github.io/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+      <guid>https://sjj1017.github.io/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
       <description>&lt;h3 id=&#34;确定性有穷自动机&#34;&gt;确定性有穷自动机&lt;/h3&gt;
 &lt;p&gt;状态图 ：状态 ：起始状态(StartState)、接受状态(AcceptState)；转移：输入符号，从一个状态转移到另一个状态； 输出：接受或拒绝。
 $M={Q,\Sigma,\delta,q_o,F}$ 字母代表状态集、字母表、转一函数、起始状态、接收状态集&lt;/p&gt;

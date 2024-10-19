@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>CS on Jiajun, Shen</title>
-    <link>http://localhost:49441/tags/cs/</link>
+    <link>https://sjj1017.github.io/tags/cs/</link>
     <description>Recent content in CS on Jiajun, Shen</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 19 Oct 2024 16:34:43 +0800</lastBuildDate>
-    <atom:link href="http://localhost:49441/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sjj1017.github.io/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>理论计算机</title>
-      <link>http://localhost:49441/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <link>https://sjj1017.github.io/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
       <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
-      <guid>http://localhost:49441/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+      <guid>https://sjj1017.github.io/posts/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
       <description>&lt;h3 id=&#34;确定性有穷自动机&#34;&gt;确定性有穷自动机&lt;/h3&gt;
 &lt;p&gt;状态图 ：状态 ：起始状态(StartState)、接受状态(AcceptState)；转移：输入符号，从一个状态转移到另一个状态； 输出：接受或拒绝。
 $M={Q,\Sigma,\delta,q_o,F}$ 字母代表状态集、字母表、转一函数、起始状态、接收状态集&lt;/p&gt;
