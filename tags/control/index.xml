@@ -6,12 +6,12 @@
     <description>Recent content in Control on Jiajun, Shen</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Oct 2024 16:34:43 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Sep 2023 16:34:43 +0800</lastBuildDate>
     <atom:link href="https://sjj1017.github.io/tags/control/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>复杂系统决策智能</title>
       <link>https://sjj1017.github.io/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</link>
-      <pubDate>Sat, 19 Oct 2024 16:34:43 +0800</pubDate>
+      <pubDate>Sat, 30 Sep 2023 16:34:43 +0800</pubDate>
       <guid>https://sjj1017.github.io/posts/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%99%BA%E8%83%BD/</guid>
       <description>&lt;h3 id=&#34;绪论&#34;&gt;绪论&lt;/h3&gt;
 &lt;ul&gt;
@@ -229,9 +229,9 @@
 &lt;li&gt;确定梯度$H_u=L_u+f_u^T\lambda$&lt;/li&gt;
 &lt;li&gt;更新$\Delta u=-\alpha H_u$&lt;/li&gt;
 &lt;li&gt;计算$\Delta L=H_u^T \Delta u$，根据要求回第二步。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;动态规划方法&#34;&gt;动态规划方法&lt;/h3&gt;
 &lt;/li&gt;
